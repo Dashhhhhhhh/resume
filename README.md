@@ -1,100 +1,153 @@
-# React + Tailwind CSS GitHub Pages Site
+# Personal Portfolio Site
 
-A basic GitHub Pages site built with React and Tailwind CSS.
+A minimal, responsive personal portfolio website built with HTML and Tailwind CSS. Designed for easy hosting on GitHub Pages.
 
-## Getting Started
+## 🚀 Features
+
+- **Static Site**: No build process required - just static HTML/CSS files
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Fast Loading**: Optimized for performance with CDN-hosted Tailwind
+- **GitHub Pages Ready**: Deploy directly from your repository
+- **Custom Fonts**: Inter font from Google Fonts for modern typography
+
+## 📁 Project Structure
+
+```
+personal-site/
+├── index.html          # Main portfolio page
+├── styles.css          # Custom styles and font imports
+├── .gitignore          # Git ignore patterns
+└── README.md           # This file
+```
+
+## 🛠️ Local Development
 
 ### Prerequisites
-- Node.js (version 18 or higher)
-- npm
 
-### Installation
+No special setup required! Just a web browser and text editor.
 
-1. Clone the repository:
-```bash
-git clone https://github.com/your-username/dashdunmire.git
-cd dashdunmire
-```
+### Running Locally
 
-2. Install dependencies:
-```bash
-npm install
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/personal-site.git
+   cd personal-site
+   ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+2. **Open in browser:**
+   - Simply open `index.html` in your web browser
+   - Or use a local server (optional):
+     ```bash
+     # Using Python (if installed)
+     python -m http.server 8000
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+     # Using Node.js (if installed)
+     npx serve .
 
-## Building for Production
+     # Then visit http://localhost:8000
+     ```
 
-To build the project for production:
+## 🚀 GitHub Pages Deployment
 
-```bash
-npm run build
-```
+### Automatic Deployment (Recommended)
 
-The built files will be in the `dist/` directory.
+1. **Create a new repository on GitHub:**
+   - Go to [GitHub.com](https://github.com) and create a new repository
+   - Name it `yourusername.github.io` (for user/organization site)
+   - Or name it `personal-site` (for project site)
+   - **Important:** Make sure the repository name matches your setup choice
 
-## Deployment to GitHub Pages
+2. **Push your code:**
+   ```bash
+   git remote add origin https://github.com/yourusername/repository-name.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-This project is configured for deployment using GitHub Pages with the "Deploy from branch" option. The build output is automatically placed in the `/docs` directory.
+3. **Enable GitHub Pages:**
+   - Go to your repository settings
+   - Scroll down to "Pages" section
+   - Under "Source", select "Deploy from a branch"
+   - Choose "main" branch and "/" (root) folder
+   - Click "Save"
 
-### Setup GitHub Pages
-
-1. Ensure your main branch is set as the GitHub Pages source
-2. Run the build command:
-```bash
-npm run build
-```
-3. This will create/update the `docs/` directory with your production build
-4. Commit and push the changes to your main branch:
-```bash
-git add .
-git commit -m "Deploy to GitHub Pages"
-git push origin main
-```
-
-Your site will be available at `https://your-username.github.io/repository-name/`
+4. **Your site will be live at:**
+   - For user/org site: `https://yourusername.github.io`
+   - For project site: `https://yourusername.github.io/personal-site`
 
 ### Manual Deployment
 
-You can also manually trigger deployment by:
-1. Running `npm run build`
-2. Committing the updated `docs/` directory
-3. Pushing to your main branch
+If automatic deployment doesn't work:
 
-## Technologies Used
+1. Go to repository Settings → Pages
+2. Set source to "main" branch, root folder
+3. The site will build and deploy automatically
+4. Check the "Actions" tab for build status
 
-- **React** - JavaScript library for building user interfaces
-- **TypeScript** - Typed superset of JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Vite** - Fast build tool and development server
-- **GitHub Actions** - CI/CD for automated deployment
+## 🎨 Customization
 
-## Project Structure
+### Content Updates
 
-```
-src/
-├── App.tsx          # Main React component
-├── main.tsx         # Application entry point
-├── index.css        # Tailwind CSS imports
-└── assets/          # Static assets
+1. **Personal Information:**
+   - Update name, tagline, and contact info in `index.html`
+   - Modify the hero section content
 
-docs/                # Production build output (GitHub Pages)
-├── index.html
-├── assets/
-└── vite.svg
+2. **Experience & Projects:**
+   - Edit the experience and projects sections
+   - Update links to your actual projects/repositories
 
-.github/
-└── workflows/
-    └── deploy.yml   # GitHub Actions deployment workflow
-```
+3. **Styling:**
+   - Modify Tailwind classes in `index.html` for different colors/sizes
+   - Add custom styles in `styles.css`
 
-## Customization
+### Color Scheme
 
-- Edit `src/App.tsx` to modify the main content
-- Update `tailwind.config.js` to customize Tailwind configuration
-- Modify the GitHub Actions workflow in `.github/workflows/deploy.yml` if needed
+The current design uses:
+- **Primary:** Blue (`blue-600`, `blue-700`)
+- **Background:** Light gray (`gray-50`)
+- **Text:** Dark gray (`gray-900`, `gray-700`)
+
+To change colors, replace the Tailwind color classes:
+- `bg-blue-600` → `bg-green-600` (for green theme)
+- `text-gray-900` → `text-slate-900` (for different gray shade)
+
+### Adding Sections
+
+To add new sections:
+
+1. Add the HTML structure in `index.html`
+2. Update the navigation links in the header
+3. Style with Tailwind utility classes
+
+### Fonts
+
+Currently using Inter font. To change fonts:
+
+1. Update the Google Fonts import in `styles.css`
+2. Change the `font-family` declaration
+
+## 📱 Responsive Design
+
+The site is fully responsive and works on:
+- **Desktop:** Full layout with side-by-side elements
+- **Tablet:** Adjusted spacing and grid layouts
+- **Mobile:** Stacked layout with touch-friendly sizing
+
+## 🔧 Technologies Used
+
+- **HTML5**: Semantic markup
+- **Tailwind CSS**: Utility-first CSS framework (CDN)
+- **Inter Font**: Modern, readable typography
+- **GitHub Pages**: Free static site hosting
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Feel free to fork this repository and customize it for your own use!
+
+---
+
+**Built with ❤️ using HTML & Tailwind CSS**
