@@ -40,16 +40,31 @@ The built files will be in the `dist/` directory.
 
 ## Deployment to GitHub Pages
 
-This project includes a GitHub Actions workflow that automatically deploys to GitHub Pages when you push to the `main` branch.
+This project is configured for deployment using GitHub Pages with the "Deploy from branch" option. The build output is automatically placed in the `/docs` directory.
 
 ### Setup GitHub Pages
 
-1. Go to your repository on GitHub
-2. Navigate to Settings > Pages
-3. Under "Source", select "GitHub Actions"
-4. Push your changes to the `main` branch
+1. Ensure your main branch is set as the GitHub Pages source
+2. Run the build command:
+```bash
+npm run build
+```
+3. This will create/update the `docs/` directory with your production build
+4. Commit and push the changes to your main branch:
+```bash
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push origin main
+```
 
-The site will be automatically deployed and available at `https://your-username.github.io/dashdunmire/`
+Your site will be available at `https://your-username.github.io/repository-name/`
+
+### Manual Deployment
+
+You can also manually trigger deployment by:
+1. Running `npm run build`
+2. Committing the updated `docs/` directory
+3. Pushing to your main branch
 
 ## Technologies Used
 
@@ -67,6 +82,11 @@ src/
 ├── main.tsx         # Application entry point
 ├── index.css        # Tailwind CSS imports
 └── assets/          # Static assets
+
+docs/                # Production build output (GitHub Pages)
+├── index.html
+├── assets/
+└── vite.svg
 
 .github/
 └── workflows/
